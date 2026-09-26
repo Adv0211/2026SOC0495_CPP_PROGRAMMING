@@ -1,0 +1,108 @@
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+class product {
+private:
+int productID;
+string productName;
+float price;
+int monthlySales[12];
+int totalQuantity;
+float totalBill;
+public:
+void acceptDetails() {
+cout << "Enter product id: ";
+cin >> productID;
+cin.ignore();
+cout << "Enter product name: ";
+getline(cin, productName);
+cout << "Enter price per unit: ";
+cin >> price;
+cout << "Enter monthly sale for 12 months:\n";
+totalQuantity = 0;
+for (int i = 0; i < 12; i++) {
+cin >> monthlySales[i];
+totalQuantity += monthlySales[i];
+  }
+totalBill = totalQuantity * price;
+  }
+
+void displayDetails() const {
+cout << "\nProduct ID: " << productID << endl;
+cout << "Product name: " << productName << endl;
+cout << "Price: " << price << endl;
+cout << "Total quantity sold: " << totalQuantity << endl;
+cout << "Total bill: " << totalBill << endl;
+  }
+
+float getTotalBill() const {
+return totalBill;
+  }
+};
+
+int main() {
+int n;
+cout << "Enter number of products: ";
+cin >> n;
+
+product products[100];
+float grandTotal = 0;
+
+for (int i = 0; i < n; i++) {
+cout << "\n--- Product " << (i + 1) << " Details ---" << endl;
+products[i].acceptDetails();
+grandTotal += products[i].getTotalBill();
+ }
+
+cout << "\n----- All product details -----" << endl;
+for (int i = 0; i < n; i++) {
+products[i].displayDetails();
+ }
+
+cout << "\nGrand Total Bill: " << grandTotal << endl;
+return 0;
+}
+
+
+
+
+
+
+
+
+PS C:\Users\TITU> g++ u1e3.cpp -o u1e3
+PS C:\Users\TITU> ./u1e3
+Enter number of products: 2
+
+--- Product 1 Details ---
+Enter product id: 142
+Enter product name: chips
+Enter price per unit: 30
+Enter monthly sale for 12 months:
+10 20 15 60 54 30 24 65 20 15 25 40
+
+--- Product 2 Details ---
+Enter product id: 123
+Enter product name: coke
+Enter price per unit: 60
+Enter monthly sale for 12 months:
+23 25 45 16 92 43 51 60 72 30 41 46
+
+----- All product details -----
+
+Product ID: 142
+Product name: chips
+Price: 30
+Total quantity sold: 378
+Total bill: 11340
+
+Product ID: 123
+Product name: coke
+Price: 60
+Total quantity sold: 544
+Total bill: 32640
+
+Grand Total Bill: 43980
+PS C:\Users\TITU>

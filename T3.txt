@@ -1,0 +1,50 @@
+  GNU nano 2.7.5                                                        File: project3.cpp
+
+#include<iostream>
+using namespace std;
+int main()
+{
+int a,b,c=0;
+cout<<"enter the values in a,b";
+cin>>a>>b;
+c=a+b;
+cout<<"c="<<c;
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\TITU> g++ project3.cpp -o project3
+PS C:\Users\TITU> ./project3
+enter the values in a,b 4 5
+c=9
+PS C:\Users\TITU>

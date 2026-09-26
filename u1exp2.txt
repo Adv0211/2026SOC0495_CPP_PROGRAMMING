@@ -1,0 +1,52 @@
+ GNU nano 2.7.5                                                           File: e2.cpp
+
+#include <iostream>
+using namespace std;
+
+class rectangle {
+private:
+float length;
+float breadth;
+
+public:
+void setDimensions(float l, float b) {
+length = l;
+breadth = b;
+}
+float calculateArea();
+float calculatePerimeter();
+void display();
+};
+float rectangle::calculateArea() {
+return length * breadth;
+}
+float rectangle::calculatePerimeter() {
+return 2 *(length + breadth);
+}
+void rectangle::display() {
+cout<<"length: " << length << endl;
+cout<<"breadth: " << breadth << endl;
+cout<<"Area: " << calculateArea() << endl;
+cout<<"Perimeter" << calculatePerimeter() << endl;
+}
+
+int main() {
+rectangle rect;
+float l, b;
+cout<<"enter length and breadth:";
+cin>>l>>b;
+rect.setDimensions(l, b);
+rect.display();
+return 0;
+
+}
+
+
+
+PS C:\Users\TITU> g++ e2.cpp -o e2
+PS C:\Users\TITU> ./e2
+enter length and breadth:5 10
+length: 5
+breadth: 10
+Area: 50
+Perimeter30

@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int a=5, b=4, c=0;
+c=a-b;
+cout<<"c="<<c;
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\TITU> g++ sub.cpp -o sub
+PS C:\Users\TITU> ./sub
+c=1
+PS C:\Users\TITU>

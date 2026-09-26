@@ -1,0 +1,49 @@
+  GNU nano 2.7.5                                                        File: project4.cpp
+
+#include<iostream>
+using namespace std;
+int main()
+{
+int a=5, b=4, c=0;
+c=a*b;
+cout<<"c="<<c;
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\TITU> g++ project4.cpp -o project4
+PS C:\Users\TITU> ./project4
+c=20
+PS C:\Users\TITU>
